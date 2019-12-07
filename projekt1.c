@@ -6,7 +6,19 @@
 
 
 
+void nacitaj(char a[],FILE *f)
+{
+    int b;
+    int i=0;
+    while((b=fgetc(f))!=EOF)
+    {
+        a[i]=b;
+        i++;
+        if (i>999)
+            break;
+    }
 
+}
 int main()
 {
     char ppole[O]="",upole[O]="";
@@ -24,7 +36,11 @@ int main()
 
             }
 
-          
+           else
+            {
+                nacitaj(ppole,fr);
+
+            }
 
 
 
