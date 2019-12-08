@@ -5,6 +5,14 @@
 #define O 1001
 
 
+void vypis(char a[])
+{
+    if((strlen(a))==0)
+    {
+        printf("Sprava nie je nacitana\n");
+    }
+    printf("%s\n",a);
+}
 
 void nacitaj(char a[],FILE *f)
 {
@@ -49,6 +57,10 @@ int main()
                 printf("Subor sa nepodarilo zatvorit\n");
 
             }
+			if(c=='v')
+        {
+            vypis(ppole);
+        }
         }
        
     return 0;
